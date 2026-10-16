@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#72c7ff" />
+  <title>Meu Brasil — Cidadezinha Online</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">🇧🇷 Meu Brasil</div>
+      <div class="status" id="status">Modo demonstração</div>
+    </header>
+    <main class="layout">
+      <section class="scene-card">
+        <div class="scene-head">
+          <div>
+            <h1>Minha cidadezinha</h1>
+            <p>Escolha uma cidade e construa sua casa.</p>
+          </div>
+          <button id="homeBtn" class="secondary">Minha casa</button>
+        </div>
+        <canvas id="scene" aria-label="Mapa ilustrado da cidade"></canvas>
+        <div class="scene-caption">Toque em uma casa para visitar. Use os botões para explorar.</div>
+      </section>
+      <aside class="panel">
+        <h2>Explorar o Brasil</h2>
+        <label for="citySelect">Cidade</label>
+        <select id="citySelect">
+          <option>Garanhuns - PE</option>
+          <option>Recife - PE</option>
+          <option>São Paulo - SP</option>
+          <option>Rio de Janeiro - RJ</option>
+          <option>Salvador - BA</option>
+          <option>Brasília - DF</option>
+          <option>Manaus - AM</option>
+          <option>Curitiba - PR</option>
+        </select>
+        <label for="playerName">Nome do jogador</label>
+        <input id="playerName" maxlength="20" placeholder="Seu nome" />
+        <label for="houseName">Nome da sua casa</label>
+        <input id="houseName" maxlength="30" placeholder="Ex.: Casa do Major" />
+        <button id="buildBtn" class="primary">Construir minha casa</button>
+        <hr />
+        <h2>Casas desta cidade</h2>
+        <div id="houseList" class="house-list"></div>
+        <p class="hint" id="hint">Esta versão funciona como demonstração local. Para casas compartilhadas entre jogadores, conecte um banco online no arquivo <code>supabase-config.js</code>.</p>
+      </aside>
+    </main>
+    <footer>Protótipo para celular • Meu Brasil</footer>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
